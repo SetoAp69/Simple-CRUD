@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:layout_width="match_parent"
+        android:id="@+id/profile_container"
+        android:layout_height="75dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#3A2636"
+        android:translationZ="1dp"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/circular_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profile_container" />
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_profile"
+            android:textSize="18sp"
+            android:text="Hello!"
+            android:layout_marginLeft="18dp"
+            android:textColor="#ffffff"/>
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/hello"
+            android:textSize="18sp"
+            android:text="Jane Doe"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="3dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@id/profile_container"
+            app:layout_constraintTop_toTopOf="@id/profile_container"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="18dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/baseline_account_balance_wallet_24"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_box"
+        android:id="@+id/top"
+        app:constraint_referenced_ids="main"
+        android:orientation="vertical"
+        app:layout_constraintBaseline_toBottomOf="@id/main">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/balance_container">
+
+            <TextView
+                android:id="@+id/tv_ballance_label"
+                app:layout_constraintStart_toStartOf="@id/balance_container"
+                app:layout_constraintTop_toTopOf="@id/balance_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Current Ballance"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_balances"
+                android:text="$69420"
+                android:textAlignment="center"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_ballance_label"
+                app:layout_constraintStart_toStartOf="@id/balance_container"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginTop="18dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="1dp"
+                android:background="@drawable/rounded_box_2"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintStart_toStartOf="@id/balance_container"
+                app:layout_constraintTop_toBottomOf="@id/tv_balances"
+                android:scaleType="fitXY"/>
+
+            <Button
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_box_2"
+                app:backgroundTint="#694d63"
+                android:id="@+id/btn_add_card"
+                android:text="Add new Card"
+                app:layout_constraintStart_toStartOf="@id/balance_container"
+                app:layout_constraintTop_toBottomOf="@id/tv_balances"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="18dp"
+
+                />
+
+
+            <Button
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_box_2"
+                app:backgroundTint="#694d63"
+                android:id="@+id/btn_change_card"
+                android:text="Change Card"
+                app:layout_constraintEnd_toEndOf="@id/balance_container"
+                app:layout_constraintTop_toBottomOf="@id/tv_balances"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="18dp"
+
+                />
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/btn_drop_down"
+            android:layout_height="5dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_box_2"
+            android:backgroundTint="#ffffff"
+            android:layout_marginHorizontal="150dp"
+            android:layout_marginTop="20dp"
+            ></ImageButton>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Recent Transaction"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="18dp"
+            />
+
+        <!--        <Button-->
+        <!--            android:layout_width="150dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:backgroundTint="@android:color/transparent"-->
+        <!--            android:text="Show All"-->
+        <!--            android:textColor="#5490A1"-->
+        <!--            android:textAlignment="textEnd"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show All"
+            android:textColor="#5490A1"
+            android:textAlignment="textEnd"
+            android:textSize="20sp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="18dp"
+            />
+
+
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="28dp"
+
+        />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
