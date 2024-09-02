@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UI.MainActivity">
+    tools:context=".MainActivity">
     <androidx.constraintlayout.widget.ConstraintLayout
 
 
@@ -121,9 +121,10 @@
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:background="@drawable/rounded_box_2"
-                app:backgroundTint="#694d63"
+                app:backgroundTint="#ffffff"
                 android:id="@+id/btn_add_card"
-                android:text="Add new Card"
+                android:text="Add Transaction"
+                android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="@id/balance_container"
                 app:layout_constraintTop_toBottomOf="@id/tv_balances"
                 android:layout_marginTop="48dp"
